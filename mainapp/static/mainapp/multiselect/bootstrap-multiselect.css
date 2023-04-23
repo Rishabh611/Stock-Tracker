@@ -1,0 +1,155 @@
+span.multiselect-native-select {
+	position: relative
+}
+
+span.multiselect-native-select select {
+	border: 0!important;
+	clip: rect(0 0 0 0)!important;
+	height: 1px!important;
+	margin: -1px -1px -1px -3px!important;
+	overflow: hidden!important;
+	padding: 0!important;
+	position: absolute!important;
+	width: 1px!important;
+	left: 50%;
+	top: 30px
+}
+
+.multiselect-container {
+	position: absolute;
+	list-style-type: none;
+	margin: 0;
+	padding: 0
+}
+
+.multiselect-container .input-group {
+	margin: 5px
+}
+
+.multiselect-container .multiselect-reset .input-group {
+	width: 93%
+}
+
+.multiselect-container>li {
+	padding: 0
+}
+
+.multiselect-container>li>a.multiselect-all label {
+	/* font-weight: 700 */
+}
+
+.multiselect-container>li.multiselect-group label {
+	margin: 0;
+	padding: 3px 20px;
+	height: 100%;
+	/* font-weight: 700 */
+}
+
+.multiselect-container>li.multiselect-group-clickable label {
+	cursor: pointer
+}
+
+.multiselect-container>li>a {
+	padding: 0
+}
+
+.multiselect-container>li>a>label {
+	margin: 0;
+	height: 100%;
+	cursor: pointer;
+	/* font-weight: 400; */
+    padding: 5px;
+    float: none;
+}
+
+.multiselect-container>li>a>label.checkbox,
+.multiselect-container>li>a>label.radio {
+	margin: 0
+}
+
+.multiselect-container>li>a>label>input[type=checkbox] {
+	margin-bottom: 5px
+}
+
+.btn-group>.btn-group:nth-child(2)>.multiselect.btn {
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px
+}
+
+.form-inline .multiselect-container label.checkbox,
+.form-inline .multiselect-container label.radio {
+	padding: 3px 20px 3px 40px
+}
+
+.form-inline .multiselect-container li a label.checkbox input[type=checkbox],
+.form-inline .multiselect-container li a label.radio input[type=radio] {
+	margin-left: -20px;
+	margin-right: 0
+}
+/*Multiselect CSS */
+
+.multiselect-container input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 22px;
+  height: 22px;
+  top: 3px;
+  left: 7px;
+}
+.multiselect-container .checkbox {
+  padding-left: 35px;
+  position: relative;
+  width: 100%;    
+  background: url(../../images/checkbox.png) no-repeat 5px;
+  font-weight: normal!important;
+  color: #000000;
+  font-size: 16px;
+}
+.multiselect-container .active .checkbox {
+  background: url(../../images/checkbox_active.png) no-repeat 5px;
+}
+button.multiselect.dropdown-toggle.btn.btn-default {
+  padding: 0 5px;
+  border: 1px solid #999999;
+  height: 32px;
+}
+span.multiselect-selected-text {
+  width: calc(100% - 20px);
+  text-align: left;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: normal;
+  position: relative;
+  color: #000000;
+  font-size: 16px;
+  float: left;
+}
+ul.multiselect-container.dropdown-menu.show{
+ border:1px solid #999999
+}
+.multiselect-container{width:100%}
+
+.multiselect{
+  background-color: transparent!important;
+  border: 1px solid #999999!important;
+  text-align: left;
+  padding: 0;
+}
+/* 
+.multiselect-selected-text{
+  float: left;
+  padding: 0 10px;
+    width: calc(100% - 25px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+   
+}
+
+ul.multiselect-container.dropdown-menu.show{
+width:100%;
+}
+.multiselect-container > li > a{
+  display: block;
+} */

@@ -1,0 +1,564 @@
+<div class="data-box-body form-group">
+  <button
+    class="btn btn-dark btn-toprightabs btn-deploymentSec deployment-sec-${globalVar.deploymentSectionCount}"
+  >
+    <i class="fas fa-times-circle"></i> Remove
+  </button>
+  <div class="data-box-body form-group">
+    <div class="row justify-content-md-left">
+      <div class="col-2">
+        <label class="form-group-label"
+          >Device Type
+          <i
+            class="far fa-question-circle infoicon"
+            data-toggle="tooltip"
+            title="Specify the device Type"
+          ></i
+        ></label>
+      </div>
+      <div class="col-2 form-group">
+        <div class="custom-control custom-checkbox">
+          <input
+            type="checkbox"
+            class="custom-control-input deployment-sec-${globalVar.deploymentSectionCount}"
+            id="chk-workstation-${globalVar.deploymentSectionCount}"
+          />
+          <label
+            class="custom-control-label"
+            for="chk-workstation-${globalVar.deploymentSectionCount}"
+            >Workstation</label
+          >
+        </div>
+      </div>
+      <div class="col-2 form-group">
+        <div class="custom-control custom-checkbox">
+          <input
+            type="checkbox"
+            class="custom-control-input deployment-sec-${globalVar.deploymentSectionCount}"
+            id="chk-Servers-${globalVar.deploymentSectionCount}"
+          />
+          <label
+            class="custom-control-label"
+            for="chk-Servers-${globalVar.deploymentSectionCount}"
+            >Servers</label
+          >
+        </div>
+      </div>
+      <div class="col-4 form-group">
+        <label class="form-group-label">Site Code</label>
+        <div class="clear">
+          <select
+            class="form-control deployment-sec-${globalVar.deploymentSectionCount} sitecode"
+            id="siteCode"
+            value=""
+            placeholder="Enter Server Name"
+          ></select>
+        </div>
+      </div>
+      <div class="col">
+        <button
+          class="btn btn-outline-primary btn-sm deployment-sec-${globalVar.deploymentSectionCount} deployment-sec"
+        >
+          <i class="bi bi-arrow-clockwise"></i>
+        </button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2">
+        <label class="form-group-label">Deployment Type</label>
+      </div>
+      <div class="col-6">
+        <div class="custom-control custom-radio custom-control-inline">
+          <input
+            type="radio"
+            class="custom-control-input rd-kbFilter-radio deployment-sec-${globalVar.deploymentSectionCount}"
+            name="rd-specifyType-${globalVar.deploymentSectionCount}"
+            id="rd-aa-0-${globalVar.deploymentSectionCount}"
+          />
+          <label
+            class="custom-control-label"
+            for="rd-aa-0-${globalVar.deploymentSectionCount}"
+            >Auto Auto</label
+          >
+        </div>
+        <div class="custom-control custom-radio custom-control-inline">
+          <input
+            type="radio"
+            class="custom-control-input rd-kbFilter-radio deployment-sec-${globalVar.deploymentSectionCount}"
+            name="rd-specifyType-${globalVar.deploymentSectionCount}"
+            id="rd-am-0-${globalVar.deploymentSectionCount}"
+          />
+          <label
+            class="custom-control-label"
+            for="rd-am-0-${globalVar.deploymentSectionCount}"
+            >Auto Manual</label
+          >
+        </div>
+        <div class="custom-control custom-radio custom-control-inline">
+          <input
+            type="radio"
+            class="custom-control-input rd-kbFilter-radio deployment-sec-${globalVar.deploymentSectionCount}"
+            name="rd-specifyType-${globalVar.deploymentSectionCount}"
+            id="rd-mm-0-${globalVar.deploymentSectionCount}"
+          />
+          <label
+            class="custom-control-label"
+            for="rd-mm-0-${globalVar.deploymentSectionCount}"
+            >Manual Manual</label
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="data-box-body form-group">
+    <h6 class="text-0070ad medium">Deployment Settings</h6>
+    <hr />
+    <div class="row form-group">
+      <div class="col-2">
+        <label class="form-group-label"
+          >Type of Deployment
+          <i
+            class="far fa-question-circle infoicon"
+            data-toggle="tooltip"
+            title="Specify if this deployment is available for installation or if it is a required installation"
+          ></i
+        ></label>
+      </div>
+      <div class="col-auto">
+        <div class="custom-control custom-radio custom-control-inline">
+          <input
+            type="radio"
+            class="custom-control-input autoAuto deployment-sec-${globalVar.deploymentSectionCount}"
+            id="rd-aa-depType-1-${globalVar.deploymentSectionCount}"
+            name="rd-aa-depType-${globalVar.deploymentSectionCount}"
+            value="Required"
+          />
+          <label
+            class="custom-control-label"
+            for="rd-aa-depType-1-${globalVar.deploymentSectionCount}"
+            >Required</label
+          >
+        </div>
+        <div class="custom-control custom-radio custom-control-inline">
+          <input
+            type="radio"
+            class="custom-control-input deployment-sec-${globalVar.deploymentSectionCount}"
+            id="rd-aa-depType-2-${globalVar.deploymentSectionCount}"
+            name="rd-aa-depType-${globalVar.deploymentSectionCount}"
+            value="Available"
+          />
+          <label
+            class="custom-control-label"
+            for="rd-aa-depType-2-${globalVar.deploymentSectionCount}"
+            >Available</label
+          >
+        </div>
+      </div>
+    </div>
+    <div class="row form-group">
+      <div class="col-2">
+        <label class="form-group-label"
+          >Detail Level
+          <i
+            class="far fa-question-circle infoicon"
+            data-toggle="tooltip"
+            title="You can specify the state message detail level returned by clients for this software update deployment"
+          ></i
+        ></label>
+      </div>
+      <div class="col-auto">
+        <div class="custom-control custom-radio custom-control-inline">
+          <input
+            type="radio"
+            class="custom-control-input autoAuto deployment-sec-${globalVar.deploymentSectionCount}"
+            id="rd-aa-detailLvl-1-${globalVar.deploymentSectionCount}"
+            name="rd-aa-detailLvl-${globalVar.deploymentSectionCount}"
+            value="AllMessages"
+          />
+          <label
+            class="custom-control-label"
+            for="rd-aa-detailLvl-1-${globalVar.deploymentSectionCount}"
+            >All Messages</label
+          >
+        </div>
+        <div class="custom-control custom-radio custom-control-inline">
+          <input
+            type="radio"
+            class="custom-control-input deployment-sec-${globalVar.deploymentSectionCount}"
+            id="rd-aa-detailLvl-2-${globalVar.deploymentSectionCount}"
+            name="rd-aa-detailLvl-${globalVar.deploymentSectionCount}"
+            value="OnlySuccessAndErrorMessages"
+          />
+          <label
+            class="custom-control-label"
+            for="rd-aa-detailLvl-2-${globalVar.deploymentSectionCount}"
+            >Only Success And Error Messages</label
+          >
+        </div>
+        <div class="custom-control custom-radio custom-control-inline">
+          <input
+            type="radio"
+            class="custom-control-input deployment-sec-${globalVar.deploymentSectionCount}"
+            id="rd-aa-detailLvl-3-${globalVar.deploymentSectionCount}"
+            name="rd-aa-detailLvl-${globalVar.deploymentSectionCount}"
+            value="OnlyErrorMessages"
+          />
+          <label
+            class="custom-control-label"
+            for="rd-aa-detailLvl-3-${globalVar.deploymentSectionCount}"
+            >Only Error Messages</label
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="data-box-body form-group">
+    <h6 class="text-0070ad medium">Scheduling</h6>
+    <hr />
+    <div class="row">
+      <div class="col-12">
+        <p class="note-container">
+          <b>Note:</b> The schedule for this deployment is always evaluated
+          based upon the local time of the client.
+        </p>
+      </div>
+    </div>
+
+    <div class="row form-group">
+      <div class="col-2">
+        <label class="form-group-label"
+          >Software Available Time
+          <i
+            class="far fa-question-circle infoicon"
+            data-toggle="tooltip"
+            title="Specify when software updates are available. Software updates are available as soon as they are distributed to the content server unless they are scheduled to install at a later time."
+          ></i
+        ></label>
+      </div>
+      <div class="col-auto">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text btn">Start Time</span>
+          </div>
+          <input
+            type="text"
+            class="form-control deployment-sec-${globalVar.deploymentSectionCount}"
+            placeholder=""
+            readonly
+            id=""
+            value="It is based on patch start time"
+          />
+          <div class="input-group-append">
+            <span class="input-group-text btn"
+              ><i class="far fa-clock"></i
+            ></span>
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text btn">Buffer Time</span>
+          </div>
+          <input
+            type="number"
+            class="form-control deployment-sec-${globalVar.deploymentSectionCount}"
+            placeholder=""
+            id=""
+            min="0"
+            max="60"
+            value="0"
+          />
+          <div class="input-group-append">
+            <span class="input-group-text btn">minutes</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row form-group">
+      <div class="col-2">
+        <label class="form-group-label"
+          >Installation Deadline
+          <i
+            class="far fa-question-circle infoicon"
+            data-toggle="tooltip"
+            title="Specify an installation deadline for required software updates. You can determine the deadline by adding the deadline time to the installation time. When the deadline is reached, required software updates are installed on the device and the device is restarted if necessary."
+          ></i
+        ></label>
+      </div>
+      <div class="col-auto">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text btn">Start Time</span>
+          </div>
+          <input
+            type="text"
+            class="form-control deployment-sec-${globalVar.deploymentSectionCount}"
+            placeholder=""
+            readonly
+            id=""
+            value="It is based on patch start time"
+          />
+          <div class="input-group-append">
+            <span class="input-group-text btn"
+              ><i class="far fa-clock"></i
+            ></span>
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text btn">Buffer Time</span>
+          </div>
+          <input
+            type="number"
+            class="form-control deployment-sec-${globalVar.deploymentSectionCount}"
+            placeholder=""
+            id=""
+            min="0"
+            max="60"
+            value="0"
+          />
+          <div class="input-group-append">
+            <span class="input-group-text btn">minutes</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="data-box-body form-group">
+    <h6 class="text-0070ad medium">User Experience</h6>
+    <hr />
+    <div class="row form-group">
+      <div class="col-2">
+        <label class="form-group-label"
+          >User Notifications
+          <i
+            class="far fa-question-circle infoicon"
+            data-toggle="tooltip"
+            title="User visual experience"
+          ></i
+        ></label>
+      </div>
+      <div class="col-3">
+        <select
+          class="form-control deployment-sec-${globalVar.deploymentSectionCount}"
+        >
+          <option value="">Please Select</option>
+          <option value="DisplaySoftwareCenterOnly">
+            Display in Software Center and show all notifications
+          </option>
+          <option value="DisplayAll">
+            Display in Software Center, and only show notifications for computer
+            restarts
+          </option>
+          <option value="HideAll">
+            Hide in Software Center and all notifications
+          </option>
+        </select>
+      </div>
+    </div>
+    <div class="row form-group">
+      <div class="col-2">
+        <label class="form-group-label"
+          >Deadline Behavior
+          <i
+            class="far fa-question-circle infoicon"
+            data-toggle="tooltip"
+            title="When the installation deadline is reached, allow the following activities to be performed outside the maintenance Window
+                                              "
+          ></i
+        ></label>
+      </div>
+      <div class="col-3">
+        <div class="custom-control custom-checkbox">
+          <input
+            type="checkbox"
+            class="custom-control-input deployment-sec-${globalVar.deploymentSectionCount}"
+            id="chk-aa-deadlinebeh-1-${globalVar.deploymentSectionCount}"
+          />
+          <label
+            class="custom-control-label"
+            for="chk-aa-deadlinebeh-1-${globalVar.deploymentSectionCount}"
+            >Software updates installation</label
+          >
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="custom-control custom-checkbox">
+          <input
+            type="checkbox"
+            class="custom-control-input deployment-sec-${globalVar.deploymentSectionCount}"
+            id="chk-aa-deadlinebeh-2-${globalVar.deploymentSectionCount}"
+          />
+          <label
+            class="custom-control-label"
+            for="chk-aa-deadlinebeh-2-${globalVar.deploymentSectionCount}"
+            >System restart (if necessary)</label
+          >
+        </div>
+      </div>
+    </div>
+    <div class="row form-group">
+      <div class="col-2">
+        <label class="form-group-label"
+          >Suppress the system restart on the following devices
+          <i
+            class="far fa-question-circle infoicon"
+            data-toggle="tooltip"
+            title="Device restart behavior"
+          ></i
+        ></label>
+      </div>
+      <div class="col-3">
+        <div class="custom-control custom-checkbox">
+          <input
+            type="checkbox"
+            class="custom-control-input deployment-sec-${globalVar.deploymentSectionCount}"
+            id="chk-aa-devResBeh-1-${globalVar.deploymentSectionCount}"
+          />
+          <label
+            class="custom-control-label"
+            for="chk-aa-devResBeh-1-${globalVar.deploymentSectionCount}"
+            >Servers</label
+          >
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="custom-control custom-checkbox">
+          <input
+            type="checkbox"
+            class="custom-control-input deployment-sec-${globalVar.deploymentSectionCount}"
+            id="chk-aa-devResBeh-2-${globalVar.deploymentSectionCount}"
+          />
+          <label
+            class="custom-control-label"
+            for="chk-aa-devResBeh-2-${globalVar.deploymentSectionCount}"
+            >Workstations</label
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="data-box-body">
+    <h6 class="text-0070ad medium">Download Settings</h6>
+    <hr />
+    <h6 class="text-0070ad medium">
+      Select the deployment option to use when a client uses a distribution
+      point from a neighbor boundary group or the default site boundary group.
+    </h6>
+    <div class="row form-group">
+      <div class="col-2">
+        <label class="form-group-label">Deployment options </label>
+      </div>
+      <div class="col-auto">
+        <div class="custom-control custom-radio custom-control-inline">
+          <input
+            type="radio"
+            class="custom-control-input deployment-sec-${globalVar.deploymentSectionCount}"
+            id="rd-aa-depOpt1-1-${globalVar.deploymentSectionCount}"
+            name="rd-aa-depOpt1-${globalVar.deploymentSectionCount}"
+            value=""
+          />
+          <label
+            class="custom-control-label"
+            for="rd-aa-depOpt1-1-${globalVar.deploymentSectionCount}"
+            >Do not install software updates</label
+          >
+        </div>
+        <div class="custom-control custom-radio custom-control-inline">
+          <input
+            type="radio"
+            class="custom-control-input deployment-sec-${globalVar.deploymentSectionCount}"
+            id="rd-aa-depOpt1-2-${globalVar.deploymentSectionCount}"
+            name="rd-aa-depOpt1-${globalVar.deploymentSectionCount}"
+            value=""
+          />
+          <label
+            class="custom-control-label"
+            for="rd-aa-depOpt1-2-${globalVar.deploymentSectionCount}"
+            >Download software updates from distribution point and
+            install</label
+          >
+        </div>
+      </div>
+    </div>
+    <hr />
+    <h6 class="text-0070ad medium">
+      When software updates are not available on any distribution points in
+      current or neighbor boundary group, client can download and install
+      software updates from distribution points in site default boundary group.
+    </h6>
+    <div class="row form-group">
+      <div class="col-2">
+        <label class="form-group-label">Deployment options</label>
+      </div>
+      <div class="col-auto">
+        <div class="custom-control custom-radio custom-control-inline">
+          <input
+            type="radio"
+            class="custom-control-input deployment-sec-${globalVar.deploymentSectionCount}"
+            id="rd-aa-depOpt2-1-${globalVar.deploymentSectionCount}"
+            name="rd-aa-depOpt2-${globalVar.deploymentSectionCount}"
+            value=""
+          />
+          <label
+            class="custom-control-label"
+            for="rd-aa-depOpt2-1-${globalVar.deploymentSectionCount}"
+            >Do not install software updates</label
+          >
+        </div>
+        <div class="custom-control custom-radio custom-control-inline">
+          <input
+            type="radio"
+            class="custom-control-input deployment-sec-${globalVar.deploymentSectionCount}"
+            id="rd-aa-depOpt2-2-${globalVar.deploymentSectionCount}"
+            name="rd-aa-depOpt2-${globalVar.deploymentSectionCount}"
+            value=""
+          />
+          <label
+            class="custom-control-label"
+            for="rd-aa-depOpt2-2-${globalVar.deploymentSectionCount}"
+            >Download and install software updates from the distribution points
+            in site default boundary group</label
+          >
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="clear form-group">
+      <div class="custom-control custom-checkbox">
+        <input
+          type="checkbox"
+          class="custom-control-input deployment-sec-${globalVar.deploymentSectionCount}"
+          id="chk-aa-depset-1-${globalVar.deploymentSectionCount}"
+        />
+        <label
+          class="custom-control-label"
+          for="chk-aa-depset-1-${globalVar.deploymentSectionCount}"
+          >If software updates are not available on distribution point in
+          current, neighbor or site boundary groups, download content from
+          Microsoft Updates</label
+        >
+      </div>
+    </div>
+    <div class="clear">
+      <div class="custom-control custom-checkbox">
+        <input
+          type="checkbox"
+          class="custom-control-input deployment-sec-${globalVar.deploymentSectionCount}"
+          id="chk-aa-depset-2-${globalVar.deploymentSectionCount}"
+        />
+        <label
+          class="custom-control-label"
+          for="chk-aa-depset-2-${globalVar.deploymentSectionCount}"
+          >Allow clients on a metered Intemet connection to download content
+          after the installation deadline, which might incur additional
+          costs</label
+        >
+      </div>
+    </div>
+  </div>
+</div>
