@@ -1,5 +1,5 @@
 {% extends 'mainapp/base.html' %} {% load static %} {% block title %}
-<!-- prettier-ignore -->
+<style></style>
 {% load myfilters %} Stock Tracker {% endblock %} {% block css %}
 <style>
   .red {
@@ -8,10 +8,14 @@
   .green {
     color: green;
   }
+
+  .table-container {
+    overflow-x: scroll;
+  }
 </style>
 {% endblock %} {% block body %}
 
-<div class="container">
+<div class="table-container">
   <h1>Live Stock Tracker</h1>
   <table class="table">
     <thead>
@@ -83,11 +87,12 @@
 
   stocksocket.onmessage = function (e) {
     console.log(e.data);
-    const data = JSON.parse(e.data);
+    const output = e.data.replace(/(:\s*)NaN(\s*[,}])/, '$1null$2');
+    const data = JSON.parse(output);
     console.log(data);
     for (const [key, value] of Object.entries(data)) {
-      var price = Number(value['Quote Price']).toFixed(4);
-      var prevprice = Number(value['Previous Close']).toFixed(4);
+      var price = Number(value['Quote Price'].toFixed(4));
+      var prevprice = Number(value['Previous Close'].toFixed(4));
       document.getElementById(key + '_price').innerHTML = price;
       document.getElementById(key + '_prev_price').innerHTML = prevprice;
       document.getElementById(key + '_open').innerHTML = value['Open'];
@@ -96,11 +101,11 @@
       var change =
         document.getElementById(key + '_price').innerHTML -
         document.getElementById(key + '_prev_price').innerHTML;
-      change = Number(change).toFixed(4);
+      change = Number(change.toFixed(4));
       if (change > 0) {
         document.getElementById(key + '_change').className = 'green';
         document.getElementById(key + '_change').innerHTML = '+' + change;
-      } else {
+      } else if (change < 0) {
         document.getElementById(key + '_change').className = 'red';
         document.getElementById(key + '_change').innerHTML = change;
       }
